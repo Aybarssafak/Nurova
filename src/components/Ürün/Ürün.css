@@ -1,0 +1,32 @@
+.ürün {
+    background-color: #2F5D91;
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    max-height: 500px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.resim2 {
+    height: 300px;
+    width: 400px;
+}
+.resim2 img {
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.metin3 p {
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.baslik2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

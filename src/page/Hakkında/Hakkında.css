@@ -1,0 +1,144 @@
+.hakkında{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    gap: 50px;
+}
+
+.baslik{
+    display: flex;
+    padding-top: 10px;
+}
+
+.baslik h1{
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.hakkinda-icerik{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+.resim{
+    display: flex;
+    height: 500px;
+    width: 800px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 110px;
+}
+
+.resim img{
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.metin2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #333;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    .hakkında {
+        height: auto;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .hakkinda-icerik {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .resim {
+        height: auto;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .resim img {
+        height: auto;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .metin2 {
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 30px 20px;
+        font-size: 1.1rem;
+    }
+
+    .baslik h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Phone Styles */
+@media screen and (max-width: 768px) {
+    .hakkında {
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .hakkinda-icerik {
+        gap: 20px;
+    }
+
+    .resim {
+        max-width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .resim img {
+        max-width: 100%;
+    }
+
+    .metin2 {
+        width: 95%;
+        padding: 20px 15px;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .baslik h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small Phone Styles */
+@media screen and (max-width: 480px) {
+    .hakkında {
+        padding: 15px 10px;
+    }
+
+    .metin2 {
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+
+    .baslik h1 {
+        font-size: 1.3rem;
+    }
+}
