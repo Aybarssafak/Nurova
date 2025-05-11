@@ -1,4 +1,5 @@
 import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import Navbar from './components/Navbar/Navbar.jsx';
 import AnaSayfa from './page/AnaSayfa/AnaSayfa.jsx';
 import Blog from './page/Blog/Blog.jsx';
