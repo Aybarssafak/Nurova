@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -6,6 +6,31 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    // Prevent scrolling when menu is open
+    document.body.style.overflow = !isOpen ? 'hidden' : 'unset';
+  };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && !event.target.closest('.nav-menu') && !event.target.closest('.menu-icon')) {
+        setIsOpen(false);
+        document.body.style.overflow = 'unset';
+      }
+    };
+
+    
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
+  // Close menu when clicking a link
+  const handleLinkClick = () => {
+    setIsOpen(false);
+    document.body.style.overflow = 'unset';
   };
 
   return (
@@ -21,19 +46,19 @@ const Navbar = () => {
 
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a href="#anasayfa" className="nav-link">Ana Sayfa</a>
+            <a href="#anasayfa" className="nav-link" onClick={handleLinkClick}>Ana Sayfa</a>
           </li>
           <li className="nav-item">
-            <a href="#hakkinda" className="nav-link">Hakkında</a>
+            <a href="#hakkinda" className="nav-link" onClick={handleLinkClick}>Hakkında</a>
           </li>
           <li className="nav-item">
-            <a href="#urunler" className="nav-link">Ürünler</a>
+            <a href="#urunler" className="nav-link" onClick={handleLinkClick}>Ürünler</a>
           </li>
           <li className="nav-item">
-            <a href="#blog" className="nav-link">Blog</a>
+            <a href="#blog" className="nav-link" onClick={handleLinkClick}>Blog</a>
           </li>
           <li className="nav-item">
-            <a href="#iletisim" className="nav-link">İletişim</a>
+            <a href="#iletisim" className="nav-link" onClick={handleLinkClick}>İletişim</a>
           </li>
         </ul>
       </div>

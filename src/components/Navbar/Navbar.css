@@ -72,6 +72,19 @@
 
 .menu-icon {
   display: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.menu-icon i {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.menu-icon:hover i {
+  color: #007bff;
 }
 
 /* Tablet Styles */
@@ -104,50 +117,58 @@
     font-size: 1.4rem;
   }
 
+  .menu-icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+  }
+
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: calc(100vh - 70px);
-    position: absolute;
+    position: fixed;
     top: 70px;
     left: -100%;
-    opacity: 1;
+    opacity: 0;
     transition: all 0.5s ease;
     background: #ffffff;
     padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu.active {
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: 999;
   }
 
   .nav-item {
-    height: 50px;
+    height: 60px;
     width: 100%;
     margin: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-link {
     text-align: center;
     padding: 1rem;
     width: 100%;
-    display: table;
+    display: block;
     font-size: 1.1rem;
+    color: #333;
+    transition: all 0.3s ease;
   }
 
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 50%);
-    font-size: 1.6rem;
-    cursor: pointer;
-    color: #333;
+  .nav-link:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
   }
 
   /* Add backdrop when menu is open */
