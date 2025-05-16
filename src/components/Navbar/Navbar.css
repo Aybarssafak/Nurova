@@ -89,7 +89,7 @@
 }
 
 /* Tablet Styles */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1405px) {
   .navbar-container {
     padding: 0 16px;
   }
@@ -120,10 +120,9 @@
 
   .menu-icon {
     display: flex;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+
   }
 
   .nav-menu {

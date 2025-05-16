@@ -29,7 +29,7 @@
 }
 
 /* Tablet Styles */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1405px) {
     .blogss {
         height: auto;
         padding: 40px 20px;
